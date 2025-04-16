@@ -1,4 +1,11 @@
 {
+  "compilerOptions": {
+    "baseUrl": ".", // Required for paths to work
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/ui/*": ["./src/components/ui/*"]
+    }
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },

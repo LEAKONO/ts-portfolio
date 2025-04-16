@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import projects from "@/config/projects";
+import GradientText from "../ui/GradientText";
 
 export default function Projects() {
   return (
@@ -8,9 +9,13 @@ export default function Projects() {
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+          className="text-5xl font-bold text-center mb-12"
         >
-          My Projects
+          <GradientText 
+            text="My Projects" 
+            from="from-blue-400" 
+            to="to-purple-600"
+          />
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
