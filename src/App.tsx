@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import Hero from './components/sections/Hero';
+import Services from './components/sections/Services';
 import Projects from './components/sections/Projects';
+import About from './components/sections/About';
 import Contact from './components/sections/Contact';
 import Footer from './components/sections/Footer';
 import Navbar from './components/layout/Navbar';
@@ -36,7 +38,9 @@ export default function App() {
     <div className="bg-gray-950 text-white scroll-smooth">
       <Navbar />
       <Hero />
+      <Services />
       <Projects />
+      <About />
       <Contact />
       <Footer />
     </div>

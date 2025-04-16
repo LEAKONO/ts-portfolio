@@ -1,7 +1,18 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter, FaHeart } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaGlobe,
+} from "react-icons/fa";
 import socialLinks from "@/config/social";
 import GradientText from "../ui/GradientText";
+
+// Map string keys to actual icon components
+const iconMap = {
+  FaGithub,
+  FaLinkedin,
+  FaGlobe,
+};
 
 export default function Footer() {
   return (
@@ -13,16 +24,17 @@ export default function Footer() {
       <div className="container mx-auto px-4 text-center">
         <div className="flex justify-center gap-6 mb-6">
           {socialLinks.map((link, index) => {
-            const Icon = require(`react-icons/fa`)[link.icon];
+            const Icon = iconMap[link.icon];
             return (
               <motion.a
                 key={index}
                 whileHover={{ y: -5 }}
                 href={link.url}
                 target="_blank"
+                rel="noopener noreferrer"
                 className={`text-2xl ${link.color}`}
               >
-                <Icon />
+                {Icon ? <Icon /> : null}
               </motion.a>
             );
           })}
