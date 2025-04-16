@@ -4,8 +4,23 @@
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  @apply w-2;
 }
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
 ::-webkit-scrollbar-thumb {
-  @apply bg-purple-600 rounded-full;
+  @apply bg-gradient-to-b from-purple-500 to-pink-600 rounded-full;
+}
+
+/* Selection color */
+::selection {
+  @apply bg-purple-600 text-white;
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-colors duration-200;
 }
