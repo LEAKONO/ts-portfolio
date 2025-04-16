@@ -13,8 +13,8 @@ const services = [
     icon: "⚙️"
   },
   {
-    title: "UI/UX Design",
-    description: "Beautiful, intuitive interfaces designed with user experience in mind, following modern design principles and accessibility standards.",
+    title: "Frontend Development",
+    description: "Building intuitive, engaging, and responsive user interfaces with modern frameworks like React, ensuring a seamless user experience across devices.",
     icon: "🎨"
   },
   {
