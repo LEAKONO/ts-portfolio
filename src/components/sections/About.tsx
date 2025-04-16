@@ -35,18 +35,51 @@ export default function About() {
             </h2>
             
             <p className="text-gray-300 text-lg mb-6">
-              Hi, I'm Emmanuel Leakono, a passionate Full-Stack Developer with expertise in React, TypeScript, and modern web technologies. With 5+ years of experience, I create performant, accessible, and visually stunning web applications.
+              Full-Stack Software Engineer specializing in building modern, scalable web applications. 
+              I bring projects from concept to production with secure authentication, real-time features, and clean UI/UX 
+              using technologies like React, Node.js, and Tailwind CSS.
             </p>
             
             <p className="text-gray-300 text-lg mb-8">
-              When I'm not coding, you can find me contributing to open-source projects, learning new technologies, or mentoring junior developers. I believe in writing clean, maintainable code and creating exceptional user experiences.
+              My technical projects like the Doctor Appointment Booking System and Task Master app demonstrate my ability 
+              to create full-stack solutions with CRUD operations, JWT authentication, and responsive designs. 
+              I'm passionate about solving real-world problems through clean, maintainable code.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-8">
               <span className="px-4 py-2 bg-gray-800 rounded-full text-purple-400">React</span>
               <span className="px-4 py-2 bg-gray-800 rounded-full text-blue-400">TypeScript</span>
               <span className="px-4 py-2 bg-gray-800 rounded-full text-green-400">Node.js</span>
-              <span className="px-4 py-2 bg-gray-800 rounded-full text-yellow-400">GraphQL</span>
+              <span className="px-4 py-2 bg-gray-800 rounded-full text-yellow-400">Django</span>
+              <span className="px-4 py-2 bg-gray-800 rounded-full text-pink-400">MongoDB</span>
+              <span className="px-4 py-2 bg-gray-800 rounded-full text-indigo-400">PostgreSQL</span>
+            </div>
+
+            <div className="flex flex-wrap gap-4 mb-8">
+              <a 
+                href="https://github.com/LEAKONO" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-gray-800 rounded-full hover:bg-gray-700 transition"
+              >
+                GitHub
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/emmanuel-leakono-7125472b8/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-gray-800 rounded-full hover:bg-gray-700 transition"
+              >
+                LinkedIn
+              </a>
+              <a 
+                href="https://my-website-amber-pi.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-gray-800 rounded-full hover:bg-gray-700 transition"
+              >
+                Portfolio
+              </a>
             </div>
 
             <MagneticButton className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-bold">
