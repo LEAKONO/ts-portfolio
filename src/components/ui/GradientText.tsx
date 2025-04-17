@@ -1,25 +1,25 @@
-import { motion } from "framer-motion";
-
 interface GradientTextProps {
   text: string;
-  from?: string;
-  to?: string;
+  from: string;
+  to: string;
+  via?: string;
   className?: string;
 }
 
 export default function GradientText({ 
   text, 
-  from = "from-purple-400", 
-  to = "to-pink-600",
+  from, 
+  to, 
+  via, 
   className = "" 
 }: GradientTextProps) {
+  const gradientClass = via 
+    ? `bg-gradient-to-r ${from} ${via} ${to}`
+    : `bg-gradient-to-r ${from} ${to}`;
+
   return (
-    <motion.span
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className={`bg-clip-text text-transparent bg-gradient-to-r ${from} ${to} ${className}`}
-    >
+    <span className={`inline-block text-transparent bg-clip-text ${gradientClass} ${className}`}>
       {text}
-    </motion.span>
+    </span>
   );
 }

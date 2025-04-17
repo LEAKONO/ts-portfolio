@@ -15,11 +15,13 @@
     "@react-three/fiber": "^9.1.2",
     "drei": "^2.2.21",
     "framer-motion": "^12.7.3",
+    "lucide-react": "^0.488.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-tsparticles": "^2.12.2",
     "react-type-animation": "^3.2.0",
+    "tailwindcss-animation-delay": "^2.0.2",
     "tsparticles": "^3.8.1"
   },
   "devDependencies": {
