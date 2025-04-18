@@ -50,10 +50,17 @@ export default function About() {
             <TypeAnimation
               sequence={[
                 `Hi, I'm ${name}`,
-                1000,
+                2000,
+                `Hello, I'm ${name}`,
+                2000,
+                `Hey there, I'm ${name}`,
+                2000,
+                `Hi, I'm ${name}`,
+                2000,
               ]}
               wrapper="span"
-              cursor={false}
+              cursor={true}
+              repeat={Infinity}
               speed={30}
               style={{ display: 'inline-block' }}
               className="text-emerald-400"
@@ -63,16 +70,24 @@ export default function About() {
             <TypeAnimation
               sequence={[
                 'Full Stack Software Engineer',
-                1000,
+                2000,
+                'Frontend Developer',
+                2000,
+                'Backend Developer',
+                2000,
+                'Web Application Developer',
+                2000,
               ]}
               wrapper="span"
-              cursor={false}
+              cursor={true}
+              repeat={Infinity}
               speed={30}
               style={{ display: 'inline-block' }}
             />
           </h4>
         </motion.div>
 
+        {/* Rest of your component remains the same */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
