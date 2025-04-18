@@ -20,6 +20,7 @@ import { FiDownload } from "react-icons/fi";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import GradientText from "../ui/GradientText";
 import MagneticButton from "../ui/MagneticButton";
+import { TypeAnimation } from 'react-type-animation';
 
 const name = "Emmanuel Leakono";
 
@@ -27,7 +28,8 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative min-h-screen flex items-center justify-start pt-10 px-4 sm:pl-10 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-start px-4 sm:pl-10 overflow-hidden"
+      style={{ paddingTop: '5rem' }}
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -38,65 +40,39 @@ export default function About() {
       </div>
 
       <div className="container mx-auto px-4 py-8 relative z-10">
-        {/* Hero Section with Typing Animation */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-left mb-16"
+          className="text-left mb-8"
         >
-          <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-4xl sm:text-5xl md:text-7xl font-thin mb-4"
-          >
-            <motion.span
-              initial={{ width: 0 }}
-              animate={{ width: "100%" }}
-              transition={{
-                delay: 0.3,
-                duration: 2,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="inline-block overflow-hidden whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-teal-600"
-            >
-              {name}
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: [0, 1, 0],
-                transition: {
-                  delay: 2.3,
-                  repeat: Infinity,
-                  duration: 1.5,
-                },
-              }}
-              className="ml-2 inline-block h-12 w-1 bg-emerald-400"
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-200 mb-2">
+            <TypeAnimation
+              sequence={[
+                `Hi, I'm ${name}`,
+                1000,
+              ]}
+              wrapper="span"
+              cursor={false}
+              speed={30}
+              style={{ display: 'inline-block' }}
+              className="text-emerald-400"
             />
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8"
-          >
-            <span className="inline-block overflow-hidden">
-              <motion.span
-                initial={{ y: 20 }}
-                animate={{ y: 0 }}
-                transition={{ delay: 0.6, type: "spring", stiffness: 100 }}
-                className="inline-block"
-              >
-                Full-Stack Developer & Digital Craftsman
-              </motion.span>
-            </span>
-          </motion.p>
+          </h1>
+          <h4 className="text-xl sm:text-2xl md:text-3xl font-thin text-gray-300">
+            <TypeAnimation
+              sequence={[
+                'Full Stack Software Engineer',
+                1000,
+              ]}
+              wrapper="span"
+              cursor={false}
+              speed={30}
+              style={{ display: 'inline-block' }}
+            />
+          </h4>
         </motion.div>
 
-        {/* About Content */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -104,44 +80,140 @@ export default function About() {
           transition={{ duration: 0.8, type: "spring" }}
           className="flex flex-col lg:flex-row gap-12 items-center"
         >
-          {/* Image Section */}
-          <div className="flex-1 w-full max-w-lg mx-auto">
+          {/* Enhanced Image Section - Moved up with lg:-mt-32 */}
+          <div className="flex-1 w-full max-w-lg mx-auto lg:-mt-32">
             <motion.div
               initial={{ scale: 0.9, rotate: -2 }}
-              animate={{ scale: 1, rotate: 0 }}
-              transition={{ delay: 0.5, type: "spring" }}
-              className="relative w-full"
-              whileHover={{ scale: 1.02 }}
+              animate={{ 
+                scale: 1, 
+                rotate: 0,
+                transition: { 
+                  delay: 0.5, 
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 10
+                } 
+              }}
+              className="relative w-full group"
+              whileHover={{ 
+                scale: 1.02,
+                transition: { 
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 10
+                }
+              }}
             >
-              <div className="absolute -inset-2 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+              {/* Glowing background effect */}
+              <div className="absolute -inset-2 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition-all duration-500"></div>
+              
+              {/* Floating circles */}
+              <motion.div 
+                className="absolute -bottom-5 -right-5 w-24 h-24 bg-emerald-500/10 rounded-full border-2 border-emerald-400/30 backdrop-blur-sm"
+                animate={{
+                  y: [0, -10, 0],
+                  transition: {
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }
+                }}
+              />
+              
+              <motion.div 
+                className="absolute -top-5 -left-5 w-16 h-16 bg-teal-600/10 rounded-full border-2 border-teal-400/30 backdrop-blur-sm"
+                animate={{
+                  y: [0, 10, 0],
+                  transition: {
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1
+                  }
+                }}
+              />
+              
+              {/* Main image container */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent z-10"></div>
-                <img
+                
+                {/* Image with parallax effect */}
+                <motion.img
                   src="/images/dev.jpg"
-                  className="w-full h-auto object-cover transform transition-transform duration-500 hover:scale-105"
+                  className="w-full h-auto object-cover"
                   alt="Emmanuel Leakono"
+                  initial={{ scale: 1.1 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 1.5, ease: [0.2, 0.8, 0.2, 1] }}
+                  whileHover={{ 
+                    scale: 1.05,
+                    transition: { duration: 0.5 }
+                  }}
+                />
+                
+                {/* Subtle shine effect on hover */}
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100"
+                  initial={{ x: -100 }}
+                  whileHover={{ 
+                    x: 100,
+                    transition: { 
+                      duration: 0.8,
+                      ease: "easeInOut"
+                    }
+                  }}
                 />
               </div>
-              <div className="absolute -bottom-5 -right-5 w-24 h-24 bg-emerald-500/10 rounded-full border-2 border-emerald-400/30 backdrop-blur-sm"></div>
-              <div className="absolute -top-5 -left-5 w-16 h-16 bg-teal-600/10 rounded-full border-2 border-teal-400/30 backdrop-blur-sm"></div>
+              
+              {/* Floating tech icons around the image */}
+              <motion.div 
+                className="absolute -bottom-8 -left-8 text-3xl text-emerald-400"
+                animate={{
+                  rotate: [0, 10, 0],
+                  transition: {
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }
+                }}
+              >
+                <SiReact />
+              </motion.div>
+              
+              <motion.div 
+                className="absolute -top-8 -right-8 text-3xl text-teal-400"
+                animate={{
+                  rotate: [0, -15, 0],
+                  transition: {
+                    duration: 7,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.5
+                  }
+                }}
+              >
+                <SiTypescript />
+              </motion.div>
             </motion.div>
           </div>
 
           {/* Content Section */}
           <div className="flex-1">
-            <motion.h2
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
+              className="mb-6"
             >
               <GradientText
                 text="My Expertise"
                 from="from-emerald-400"
                 to="to-teal-600"
+                className="text-3xl md:text-4xl lg:text-5xl font-bold"
               />
-            </motion.h2>
+            </motion.div>
 
             <motion.p
               initial={{ opacity: 0 }}
@@ -150,28 +222,56 @@ export default function About() {
               viewport={{ once: true }}
               className="text-gray-300 text-base sm:text-lg mb-6 leading-relaxed"
             >
-              I specialize in building{" "}
-              <span className="text-white font-medium">modern</span>,{" "}
-              <span className="text-white font-medium">scalable</span> web
-              applications with cutting-edge technologies like{" "}
-              <span className="text-emerald-300 font-medium">React</span>,{" "}
-              <span className="text-emerald-300 font-medium">Next.js</span>, and{" "}
-              <span className="text-emerald-300 font-medium">Tailwind CSS</span>
-              . With a passion for{" "}
-              <span className="text-white font-medium">elegant code</span> and{" "}
-              <span className="text-white font-medium">
-                intuitive interfaces
-              </span>
-              , I craft digital experiences that are as{" "}
-              <span className="text-white font-medium">performant</span> as they
-              are <span className="text-white font-medium">beautiful</span>.
+              I specialize in building <span className="text-white font-medium">modern</span>,{' '}
+              <span className="text-white font-medium">scalable</span> web applications using{' '}
+              <span className="text-emerald-300 font-medium">React</span>,{' '}
+              <span className="text-emerald-300 font-medium">Next.js</span>,{' '}
+              <span className="text-emerald-300 font-medium">TypeScript</span>, and{' '}
+              <span className="text-emerald-300 font-medium">Node.js</span>. With expertise in both{' '}
+              <span className="text-white font-medium">frontend</span> and{' '}
+              <span className="text-white font-medium">backend</span> development, I work with{' '}
+              <span className="text-emerald-300 font-medium">Django</span>,{' '}
+              <span className="text-emerald-300 font-medium">Flask</span>,{' '}
+              <span className="text-emerald-300 font-medium">MongoDB</span>, and{' '}
+              <span className="text-emerald-300 font-medium">PostgreSQL</span> to create{' '}
+              <span className="text-white font-medium">full-stack solutions</span>.
             </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              viewport={{ once: true }}
+              className="text-gray-300 text-base sm:text-lg mb-6 leading-relaxed"
+            >
+              My toolkit includes <span className="text-emerald-300 font-medium">Tailwind CSS</span>,{' '}
+              <span className="text-emerald-300 font-medium">Framer Motion</span>, and{' '}
+              <span className="text-emerald-300 font-medium">Git</span> for crafting{' '}
+              <span className="text-white font-medium">responsive</span>,{' '}
+              <span className="text-white font-medium">animated interfaces</span> with{' '}
+              <span className="text-white font-medium">version control</span>. I'm passionate about{' '}
+              <span className="text-emerald-300 font-medium">clean code</span> and{' '}
+              <span className="text-emerald-300 font-medium">intuitive UX</span>, creating digital experiences that are both{' '}
+              <span className="text-white font-medium">performant</span> and{' '}
+              <span className="text-white font-medium">visually stunning</span>.
+            </motion.p>
+
+            {/* My Stack Title */}
+            <motion.h3
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              viewport={{ once: true }}
+              className="text-2xl md:text-3xl font-bold mb-4 text-gray-200"
+            >
+              My <span className="text-emerald-400">Tech Stack</span>
+            </motion.h3>
 
             {/* Skills Grid */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
+              transition={{ delay: 0.7 }}
               viewport={{ once: true }}
               className="grid grid-cols-4 sm:grid-cols-6 gap-4 text-3xl sm:text-4xl text-center text-emerald-400 mb-8"
             >
@@ -238,7 +338,9 @@ export default function About() {
               {/* GitHub Button */}
               <MagneticButton>
                 <button
-                  onClick={() => window.open("https://github.com/LEAKONO", "_blank")}
+                  onClick={() =>
+                    window.open("https://github.com/LEAKONO", "_blank")
+                  }
                   className="relative px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-lg font-bold shadow-lg overflow-hidden group"
                 >
                   <span className="relative z-10 flex items-center gap-2 text-white">
@@ -253,7 +355,12 @@ export default function About() {
               {/* LinkedIn Button */}
               <MagneticButton>
                 <button
-                  onClick={() => window.open("https://www.linkedin.com/in/emmanuel-leakono-7125472b8/", "_blank")}
+                  onClick={() =>
+                    window.open(
+                      "https://www.linkedin.com/in/emmanuel-leakono-7125472b8/",
+                      "_blank"
+                    )
+                  }
                   className="relative px-6 py-3 bg-transparent border-2 border-teal-600 rounded-lg font-bold overflow-hidden group"
                 >
                   <span className="relative z-10 flex items-center gap-2 text-teal-400 group-hover:text-white transition-colors">
