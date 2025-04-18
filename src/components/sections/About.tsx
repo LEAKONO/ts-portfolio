@@ -40,52 +40,49 @@ export default function About() {
       </div>
 
       <div className="container mx-auto px-4 py-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-left mb-8"
-        >
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-200 mb-2">
-            <TypeAnimation
-              sequence={[
-                `Hi, I'm ${name}`,
-                2000,
-                `Hello, I'm ${name}`,
-                2000,
-                `Hey there, I'm ${name}`,
-                2000,
-                `Hi, I'm ${name}`,
-                2000,
-              ]}
-              wrapper="span"
-              cursor={true}
-              repeat={Infinity}
-              speed={30}
-              style={{ display: 'inline-block' }}
-              className="text-emerald-400"
-            />
-          </h1>
-          <h4 className="text-xl sm:text-2xl md:text-3xl font-thin text-gray-300">
-            <TypeAnimation
-              sequence={[
-                'Full Stack Software Engineer',
-                2000,
-                'Frontend Developer',
-                2000,
-                'Backend Developer',
-                2000,
-                'Web Application Developer',
-                2000,
-              ]}
-              wrapper="span"
-              cursor={true}
-              repeat={Infinity}
-              speed={30}
-              style={{ display: 'inline-block' }}
-            />
-          </h4>
-        </motion.div>
+      <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="text-left mb-8"
+>
+  <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-200 mb-2">
+    <TypeAnimation
+      sequence={[
+        `Hi, I'm ${name}`,
+        1000,
+        '',
+        500,
+        `Hi, I'm ${name}`,
+        1000,
+      ]}
+      wrapper="span"
+      cursor={true}
+      repeat={Infinity}
+      speed={30}
+      style={{ display: 'inline-block' }}
+      className="text-emerald-400"
+    />
+  </h1>
+  <h4 className="text-xl sm:text-2xl md:text-3xl font-thin text-gray-300">
+    <TypeAnimation
+      sequence={[
+        1500, // initial delay to sync with name
+        'Full Stack Software Engineer',
+        2000,
+        '',
+        500,
+        'Full Stack Software Engineer',
+        2000,
+      ]}
+      wrapper="span"
+      cursor={true}
+      repeat={Infinity}
+      speed={30}
+      style={{ display: 'inline-block' }}
+    />
+  </h4>
+</motion.div>
 
         {/* Rest of your component remains the same */}
         <motion.div

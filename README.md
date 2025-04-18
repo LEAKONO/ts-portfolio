@@ -1,54 +1,65 @@
-# React + TypeScript + Vite
+# My Portfolio Website
+This is my personal portfolio website built using React, TypeScript, and Vite. It showcases my projects, skills, and contact information. The project uses modern tooling and fast development features with Vite, as well as linting support with ESLint.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ⚡ Tech Stack
+- React
 
-Currently, two official plugins are available:
+- TypeScript
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Vite
 
-## Expanding the ESLint configuration
+- ESLint
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React Router 
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Tailwind CSS 
+
+## Features
+- ⚡ Super-fast development with Vite
+
+- Type-safe development with TypeScript
+
+- Clean and configurable ESLint setup
+
+- Responsive and modern UI
+
+- Hot Module Replacement (HMR) for fast updates
+
+🌐 Easily deployable (vercel)
+
+
+## Installation
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/your-username/portfolio.git
+cd portfolio
+npm install
 ```
+## Development
+Start the local development server:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run dev
 ```
+## 🙌 Acknowledgements
+- Vite
+
+- TypeScript
+
+- React
+
+ShadCN/UI (if used)
+
+## Contact
+If you'd like to get in touch:
+
+- Email: leakonoemmanuel3@gmail.com
+
+
+
+- LinkedIn: Emmanuel Leakono
+
+## License
+This project is licensed under the MIT License.
+
