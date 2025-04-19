@@ -14,7 +14,6 @@ import {
   SiTailwindcss,
   SiCss3,
   SiFramer,
-  SiNextdotjs,
 } from "react-icons/si";
 import { FiDownload } from "react-icons/fi";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
@@ -91,8 +90,8 @@ export default function About() {
           transition={{ duration: 0.8, type: "spring" }}
           className="flex flex-col lg:flex-row gap-12 items-start"
         >
-          {/* Image Section - Now on the left */}
-          <div className="flex-1 w-full max-w-lg mx-auto order-1 lg:order-1 mt-16"> {/* Changed to mt-16 for 2 inches down */}
+          {/* Image Section */}
+          <div className="flex-1 w-full max-w-lg mx-auto order-1 lg:order-1 mt-16">
             <motion.div
               initial={{ scale: 0.9, rotate: -2 }}
               animate={{
@@ -204,12 +203,12 @@ export default function About() {
                   },
                 }}
               >
-                < SiNodedotjs/>
+                <SiNodedotjs/>
               </motion.div>
             </motion.div>
           </div>
 
-          {/* Content Section - Now on the right */}
+          {/* Content Section */}
           <div className="flex-1 order-2 lg:order-2">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -239,8 +238,7 @@ export default function About() {
                   Frontend Development
                 </h4>
                 <p className="text-gray-300 leading-relaxed">
-                  I architect immersive user experiences with <span className="text-emerald-300 font-medium">React</span>, <span className="text-emerald-300 font-medium">Next.js</span>, and <span className="text-emerald-300 font-medium">TypeScript</span>. My interfaces are visually stunning, optimized for performance, accessibility, and seamless interactivity.
-                </p>
+                I architect immersive user experiences with <span className="text-emerald-300 font-medium">React</span>, <span className="text-emerald-300 font-medium">TypeScript</span>, <span className="text-emerald-300 font-medium">Tailwind CSS</span>, <span className="text-emerald-300 font-medium">HTML</span>, and <span className="text-emerald-300 font-medium">JavaScript</span>. My interfaces are visually stunning, optimized for performance, accessibility, and seamless interactivity.                </p>
               </div>
 
               {/* Backend Engineering */}
@@ -276,7 +274,6 @@ export default function About() {
 
             {/* Tech Stack Section */}
             <motion.div className="mt-8">
-              {/* My Stack Title */}
               <motion.h3
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -287,7 +284,6 @@ export default function About() {
                 My <span className="text-emerald-400">Tech Stack</span>
               </motion.h3>
 
-              {/* Skills Grid */}
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -297,7 +293,6 @@ export default function About() {
               >
                 {[
                   { icon: <SiReact />, name: "React", color: "text-cyan-400" },
-                  { icon: <SiNextdotjs />, name: "Next.js", color: "text-white" },
                   {
                     icon: <SiTypescript />,
                     name: "TypeScript",
@@ -354,7 +349,7 @@ export default function About() {
                 ))}
               </motion.div>
 
-              {/* Action Buttons - Moved inside the content section */}
+              {/* Action Buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

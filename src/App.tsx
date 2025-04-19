@@ -51,7 +51,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    document.title = "Emmanuel Leakono | Portfolio";
+    document.title = "Leakono";
     const metaDescription = document.createElement("meta");
     metaDescription.name = "description";
     metaDescription.content =
