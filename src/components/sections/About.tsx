@@ -92,7 +92,7 @@ export default function About() {
           className="flex flex-col lg:flex-row gap-12 items-start"
         >
           {/* Image Section - Now on the left */}
-          <div className="flex-1 w-full max-w-lg mx-auto order-1 lg:order-1 mt-8"> {/* Added mt-8 to move image down */}
+          <div className="flex-1 w-full max-w-lg mx-auto order-1 lg:order-1 mt-16"> {/* Changed to mt-16 for 2 inches down */}
             <motion.div
               initial={{ scale: 0.9, rotate: -2 }}
               animate={{
@@ -204,7 +204,7 @@ export default function About() {
                   },
                 }}
               >
-                <SiTypescript />
+                < SiNodedotjs/>
               </motion.div>
             </motion.div>
           </div>
