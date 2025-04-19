@@ -7,7 +7,14 @@ import {
 import GradientText from "../ui/GradientText";
 import MagneticButton from "../ui/MagneticButton";
 
-const socialLinks = [
+interface SocialLink {
+  name: string;
+  url: string;
+  icon: React.ComponentType<{ className?: string }>;
+  color: string;
+}
+
+const socialLinks: SocialLink[] = [
   {
     name: "GitHub",
     url: "https://github.com/LEAKONO",
@@ -29,12 +36,19 @@ const socialLinks = [
 ];
 
 export default function Contact() {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+  };
+
   return (
     <section id="contact" className="py-20 bg-gray-800 text-white">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
           className="text-5xl font-bold text-center mb-12"
         >
           <GradientText 
@@ -49,6 +63,8 @@ export default function Contact() {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
             className="flex-1 flex flex-col gap-6 justify-center"
           >
             <div>
@@ -66,10 +82,12 @@ export default function Contact() {
                   <motion.a
                     key={index}
                     whileHover={{ y: -4 }}
+                    whileTap={{ scale: 0.9 }}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`text-3xl ${link.color}`}
+                    className={`text-3xl text-gray-400 ${link.color} transition-colors duration-300`}
+                    aria-label={link.name}
                   >
                     <Icon />
                   </motion.a>
@@ -82,26 +100,32 @@ export default function Contact() {
           <motion.form
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
             className="flex-1 space-y-6"
+            onSubmit={handleSubmit}
           >
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white focus:outline-none"
+              className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+              required
             />
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white focus:outline-none"
+              className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+              required
             />
             <textarea
               placeholder="Your Message"
               rows={6}
-              className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white focus:outline-none"
+              className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+              required
             ></textarea>
             <MagneticButton 
               type="submit" 
-              className="px-6 py-3 bg-purple-600 rounded-lg font-bold w-full"
+              className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-bold w-full transition-colors duration-300"
             >
               Send Message
             </MagneticButton>

@@ -11,6 +11,10 @@ import Cursor from './components/sections/Cursor';
 import ScrollProgress from './components/sections/ScrollProgress';
 import ToTopButton from './components/sections/ToTopButton';
 
+interface SectionProps {
+  id: string;
+}
+
 export default function App() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -27,7 +31,7 @@ export default function App() {
       const targetId = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
       if (!targetId) return;
       
-      const targetElement = document.querySelector(targetId);
+      const targetElement = document.querySelector(targetId) as HTMLElement;
       if (targetElement) {
         window.scrollTo({
           top: targetElement.offsetTop - 80,
