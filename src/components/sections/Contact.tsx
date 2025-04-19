@@ -14,6 +14,10 @@ interface SocialLink {
   color: string;
 }
 
+interface ContactProps {
+  id: string;
+}
+
 const socialLinks: SocialLink[] = [
   {
     name: "GitHub",
@@ -35,14 +39,14 @@ const socialLinks: SocialLink[] = [
   },
 ];
 
-export default function Contact() {
+export default function Contact({ id }: ContactProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-800 text-white">
+    <section id={id} className="py-20 bg-gray-800 text-white">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}

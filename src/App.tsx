@@ -13,6 +13,7 @@ import ToTopButton from './components/sections/ToTopButton';
 
 interface SectionProps {
   id: string;
+  children?: React.ReactNode;
 }
 
 export default function App() {
