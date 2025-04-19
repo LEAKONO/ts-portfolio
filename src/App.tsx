@@ -18,11 +18,9 @@ export default function App() {
     offset: ['start start', 'end end']
   });
 
-  // Simplified scroll animations - removed opacity/scale transforms that might conflict
   const y1 = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
   const y2 = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
 
-  // Smooth scroll handler
   useEffect(() => {
     const smoothScroll = (e: Event) => {
       e.preventDefault();
@@ -50,7 +48,6 @@ export default function App() {
     };
   }, []);
 
-  // Set document metadata
   useEffect(() => {
     document.title = "Emmanuel Leakono | Portfolio";
     const metaDescription = document.createElement('meta');
@@ -72,7 +69,6 @@ export default function App() {
         ref={containerRef}
         className="relative bg-gray-950 text-white scroll-smooth overflow-hidden selection:bg-purple-600 selection:text-white"
       >
-        {/* Gradient backgrounds */}
         <motion.div 
           className="fixed inset-0 -z-20"
           style={{
@@ -88,7 +84,6 @@ export default function App() {
           }}
         />
         
-        {/* Particle background */}
         <div className="fixed inset-0 -z-10 opacity-20">
           {[...Array(30)].map((_, i) => (
             <motion.div

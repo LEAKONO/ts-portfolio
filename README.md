@@ -32,7 +32,7 @@ This is my personal portfolio website built using React, TypeScript, and Vite. I
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/your-username/portfolio.git
+git clone https://github.com/LEAKONO/ts-portfolio
 cd portfolio
 npm install
 ```
