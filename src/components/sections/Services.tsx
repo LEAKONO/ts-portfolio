@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 import GradientText from "../ui/GradientText";
 
-const services = [
+interface ServiceItem {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+const services: ServiceItem[] = [
   {
     title: "Web Development",
     description: "Custom, responsive websites built with modern technologies like React, Next.js, and TypeScript for optimal performance and user experience.",

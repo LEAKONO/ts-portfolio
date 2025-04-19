@@ -1,7 +1,16 @@
 import { motion } from "framer-motion";
 import GradientText from "../ui/GradientText";
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  tech: string[];
+  demo: string;
+  github: string;
+  image: string;
+}
+
+const projects: Project[] = [
   {
     title: "Doctor Appointment System",
     description: "Full-stack booking platform for doctors and patients with real-time scheduling and JWT authentication.",
