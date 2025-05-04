@@ -15,7 +15,7 @@ const projects: Project[] = [
     title: "Doctor Appointment System",
     description: "Full-stack booking platform for doctors and patients with real-time scheduling and JWT authentication.",
     tech: ["React", "Node.js", "MongoDB", "Tailwind"],
-    demo: "https://doctors-appointment-rjn9-2ivty2dcb-leakonos-projects.vercel.app/",
+    demo: "https://doctors-appointment-rjn9.vercel.app/",
     github: "https://github.com/LEAKONO/doctors-appointment",
     image: "/images/doctor-appointment.jpg"
   },
