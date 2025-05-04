@@ -33,7 +33,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     name: "Portfolio",
-    url: "https://my-website-amber-pi.vercel.app/",
+    url: "https://leakono-portfolio.vercel.app/",
     icon: FaGlobe,
     color: "hover:text-green-400",
   },
