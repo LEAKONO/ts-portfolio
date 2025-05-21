@@ -410,6 +410,23 @@ export default function About() {
                     <span className="absolute inset-0 border-2 border-transparent group-hover:border-emerald-400/30 rounded-lg transition-all duration-300"></span>
                   </a>
                 </MagneticButton>
+
+                {/* Transcript Button */}
+                <MagneticButton>
+                  <a
+                    href="https://drive.google.com/file/d/1tCt9idB40EwydM7k75iLR_Sf_ARwqbDM/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative px-6 py-3 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-lg font-bold shadow-lg overflow-hidden group block"
+                  >
+                    <span className="relative z-10 flex items-center gap-2 text-white">
+                      <FiDownload className="text-xl transition-transform group-hover:scale-110" />
+                      <span>Transcript</span>
+                    </span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-teal-600 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span className="absolute inset-0 border-2 border-transparent group-hover:border-emerald-400/30 rounded-lg transition-all duration-300"></span>
+                  </a>
+                </MagneticButton>
               </motion.div>
             </motion.div>
 
