@@ -49,7 +49,6 @@ npm run dev
 
 - React
 
-ShadCN/UI (if used)
 
 ## Contact
 If you'd like to get in touch:
