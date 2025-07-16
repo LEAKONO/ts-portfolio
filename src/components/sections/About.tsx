@@ -397,7 +397,7 @@ export default function About() {
                 {/* Resume Button */}
                 <MagneticButton>
                   <a
-                    href="https://docs.google.com/document/d/18d0dd1Xa_vpDJoVT1qCBa0lmumbPSMmREetQlQZnwMY/export?format=pdf"
+                    href="https://drive.google.com/file/d/1h8lNqso3eE62g1nKDsikvnXvcmb50lu-/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="relative px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg font-bold shadow-lg overflow-hidden group block"
